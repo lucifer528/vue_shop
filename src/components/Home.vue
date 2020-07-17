@@ -9,6 +9,7 @@ export default {
     logout() {
       window.sessionStorage.clear()
       this.$router.push('/login')
+      console.log('退出22222222')
     }
   }
 }
