@@ -51,6 +51,10 @@ export default {
       this.$refs.loginFormRef.resetFields()
     },
     login () {
+      /* 
+      对整个表单进行校验的方法，参数为一个回调函数。该回调函数会在
+      校验结束后被调用，并传入两个参数：是否校验成功和未通过校验的字段
+      */
       this.$refs.loginFormRef.validate(async (valid, tip) => {
         // console.log(valid)
         // console.log(tip)
