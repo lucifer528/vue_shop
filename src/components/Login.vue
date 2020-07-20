@@ -59,8 +59,14 @@ export default {
         // console.log(valid)
         // console.log(tip)
         if (!valid) return
-        const { data: res } = await this.$http.post('login', this.loginForm)
+        const { data: res } = await this.$http.post(
+          'login', this.loginForm
+        ).catch(e => {
+          // return this.$message.error('登陆失败111')
+          return e
+        })
         console.log(res)
+        if (!res) return this.$message.error('网络连接错误') // 自已加的
         if (res.meta.status !== 200) {
           // console.log(res.meta.msg)
           this.$message.error('登陆失败')
