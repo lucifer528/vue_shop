@@ -22,3 +22,15 @@ html, body, #app {
 .el-pagination {
   margin-top: 15px;
 }
+
+/* 下面2个是解决Cate.vue里面级联选择样式的问题 */
+.el-cascader-menu {
+  height: 300px;
+}
+.el-scrollbar__wrap {
+  overflow: hidden;
+  overflow-y: scroll;
+  /* 或者加个padding-bottom: 17px,为什么margin-bottom: -17px不管用,
+  我也搞不清,我也感觉margin更合理点阿 */
+  height: 100%;
+}
