@@ -322,6 +322,7 @@ export default {
         return this.$message.error('查询用户信息失败')
       }
       this.editUserForm = res.data
+      // console.log(this.editUserForm)
       this.editDialogVisible = true
     },
     editDialogClosed() {
@@ -334,7 +335,7 @@ export default {
         // const { username, ...user } = this.editUserForm
         // 上面我自已写的,打开编辑卡的时候没查询,下面跟视频
         const { username, role_id, ...user } = this.editUserForm
-        // console.log(user)
+        // console.log(user, username, role_id)
         const { data: res } = await this.$http.put(`users/${user.id}`, user)
         console.log(res)
         if (res.meta.status !== 200) {

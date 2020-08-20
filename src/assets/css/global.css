@@ -34,3 +34,16 @@ html, body, #app {
   我也搞不清,我也感觉margin更合理点阿 */
   height: 100%;
 }
+
+.el-steps {
+  margin: 15px 0;
+  /* display: flex;
+  justify-content: center; */
+}
+.el-step__title {
+  font-size: 13px;
+}
+
+.ql-editor {
+  min-height: 300px;
+}

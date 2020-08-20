@@ -9,7 +9,7 @@
       <el-button type="info" @click="logout">退出</el-button>
     </el-header>
     <!-- 页面主体 -->
-    <el-container>
+    <el-container class="content">
       <!-- 左侧 -->
       <el-aside :width="isCollapse ? '60px' : '200px'">
         <div class="toggle-button" @click="toggleCollapse">|||</div>
@@ -98,17 +98,20 @@ export default {
 <style lang="less" scoped>
 .home {
   height: 100%;
+  // overflow: hidden;
 }
 // .el-container {
 //   height: 100%;
 // }
 .el-header {
+  box-sizing: border-box;
   background-color: #373d41;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #fff;
-  font-size: 20px;
+  font-size: 1.2em;
+  height: 3.5em!important;
   > div {
     display: flex;
     align-items: center;
@@ -121,6 +124,13 @@ export default {
     border-radius: 50%;
   }
 }
+.content {
+  font-size: 1.2em;
+  height: 100%;
+  position: absolute;
+  padding-top: 3.5em;
+  width: 100%;
+}
 .el-aside {
   background-color: #333744;
   .el-menu {
@@ -129,6 +139,7 @@ export default {
 }
 .el-main {
   background-color: #eaedf1;
+  // display: flex;
 }
 
 .iconfont {
