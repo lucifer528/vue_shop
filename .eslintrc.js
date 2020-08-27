@@ -16,7 +16,7 @@ module.exports = {
     'space-before-function-paren': 0,
     'eol-last': 0,
     'no-trailing-spaces': 0,
-    'vue/no-unused-vars': 0,
+    'vue/no-unused-vars': 0, // 定义了值但是没使用过.,要不改成1.warni
     'camelcase': 0
   }
 }
