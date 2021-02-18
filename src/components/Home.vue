@@ -126,9 +126,9 @@ export default {
 }
 .content {
   font-size: 1.2em;
-  height: 100%;
-  position: absolute;
-  padding-top: 3.5em;
+  height: calc(100vh - 3.5em);
+  // position: absolute;
+  // padding-top: 3.5em;
   width: 100%;
 }
 .el-aside {
